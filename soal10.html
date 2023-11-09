@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Kembalian</title>
+  <style>
+    /* CSS untuk tampilan yang sederhana */
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Kembalian</h1>
+  <form>
+    Harga Barang: <input type="number" id="harga"><br>
+    Jumlah Uang: <input type="number" id="uang"><br>
+    <button type="button" onclick="hitungKembalian()">Hitung Kembalian</button>
+  </form>
+  <p>Kembalian: <span id="kembalian"></span></p>
+
+  <script>
+    function hitungKembalian() {
+      var harga = parseInt(document.getElementById('harga').value);
+      var uang = parseInt(document.getElementById('uang').value);
+
+      if (isNaN(harga) || isNaN(uang)) {
+        alert("Masukkan harga barang dan jumlah uang yang valid.");
+      } else if (uang < harga) {
+        alert("Jumlah uang yang diberikan kurang.");
+      } else {
+        var kembalian = uang - harga;
+        document.getElementById('kembalian').textContent = "Rp " + kembalian.toFixed(2).replace(/\.?0+$/, '');
+      }
+    }
+  </script>
+</body>
+</html>

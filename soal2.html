@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemilihan Buah</title>
+    <style>
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pilih Buah:</h1>
+    <select id="buahSelector">
+        <option value="Pisang">Pisang</option>
+        <option value="apel">Apel</option>
+        <option value="jeruk">Jeruk</option>
+        <option value="anggur">Anggur</option>
+        <option value="kiwi">Kiwi</option>
+    </select>
+    <button onclick="tampilkanPilihanBuah()">Pilih</button>
+    <p id="result"></p>
+
+    <script>
+        function tampilkanPilihanBuah() {
+    var buahSelector = document.getElementById("buahSelector");
+    var selectedBuah = buahSelector.value;
+    var resultElement = document.getElementById("result");
+
+    switch (selectedBuah) {
+        case "Pisang":
+            resultElement.textContent = "Saya pilih buah Pisang";
+            console.log("Saya pilih buah Pisang");
+            break;
+        case "apel":
+            resultElement.textContent = "Saya pilih buah apel";
+            console.log("Saya pilih buah apel");
+            break;
+        case "jeruk":
+            resultElement.textContent = "Saya pilih buah jeruk";
+            console.log("Saya pilih buah jeruk");
+            break;
+        case "anggur":
+            resultElement.textContent = "Saya pilih buah anggur";
+            console.log("Saya pilih buah anggur");
+            break;
+        case "kiwi":
+            resultElement.textContent = "Saya pilih buah kiwi";
+            console.log("Saya pilih buah kiwi");
+            break;
+        default:
+            resultElement.textContent = "Pilihan buah tidak valid";
+            console.log("Pilihan buah tidak valid");
+            break;
+    }
+}
+
+    </script>
+</body>
+</html>

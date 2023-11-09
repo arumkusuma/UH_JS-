@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* CSS untuk persegi */
+  #square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: background-color 0.5s;
+  }
+</style>
+</head>
+<body>
+  <div id="square"></div>
+  <button onclick="changeColor()">Ubah Warna</button>
+
+<script>
+    // Fungsi JavaScript untuk mengubah warna latar belakang persegi
+  function changeColor() {
+    var square = document.getElementById('square');
+    if (square.style.backgroundColor === 'red') {
+      square.style.backgroundColor = 'blue';
+    } else {
+      square.style.backgroundColor = 'red';
+    }
+  }
+</script>
+</body>
+</html>

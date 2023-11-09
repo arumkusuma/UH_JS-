@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menghitung Keliling Trapezium</title>
+</head>
+<body>
+  <h1>Menghitung Keliling Trapezium</h1>
+  <form>
+    Sisi a (panjang sisi atas): <input type="number" id="sideA"><br>
+    Sisi b (panjang sisi bawah): <input type="number" id="sideB"><br>
+    Sisi c (panjang sisi kiri): <input type="number" id="sideC"><br>
+    Sisi d (panjang sisi kanan): <input type="number" id="sideD"><br>
+    <button type="button" onclick="calculatePerimeter()">Hitung Keliling</button>
+  </form>
+  <p>Keliling Trapezium: <span id="result"></span></p>
+
+  <script>
+    function calculatePerimeter() {
+      var sideA = parseFloat(document.getElementById('sideA').value);
+      var sideB = parseFloat(document.getElementById('sideB').value);
+      var sideC = parseFloat(document.getElementById('sideC').value);
+      var sideD = parseFloat(document.getElementById('sideD').value);
+
+      var perimeter = sideA + sideB + sideC + sideD;
+
+      document.getElementById('result').textContent = perimeter;
+    }
+  </script>
+</body>
+</html>

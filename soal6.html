@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cek Kelayakan Menonton Bioskop</title>
+</head>
+<body>
+  <h1>Cek Kelayakan Menonton Bioskop</h1>
+  <form>
+    Usia: <input type="number" id="age"><br>
+    <button type="button" onclick="checkEligibility()">Cek Kelayakan</button>
+  </form>
+  <p>Status: <span id="status"></span></p>
+
+  <script>
+    function checkEligibility() {
+      var age = parseInt(document.getElementById('age').value);
+
+      if (age < 5) {
+        document.getElementById('status').textContent = "Balita - Tidak boleh menonton ke bioskop";
+      } else if (age >= 5 && age < 17) {
+        document.getElementById('status').textContent = "Anak-anak - Boleh menonton ke bioskop";
+      } else if (age >=17 && age <28){
+        document.getElementById('status').textContent = "Remaja - Kelayakan tergantung pada kebijakan bioskop";
+      } else {
+        document.getElementById('status').textContent = "Lansia -  Sangat layak menonton bioskop";
+      }
+    }
+  </script>
+</body>
+</html>

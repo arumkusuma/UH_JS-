@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program Perulangan Anak Ayam</title>
+</head>
+<body>
+  <h1>Program Perulangan Anak Ayam</h1>
+  <ul id="outputList"></ul>
+
+  <script>
+    var outputList = document.getElementById('outputList');
+
+    for (var i = 10; i >= 1; i--) {
+      var listItem = document.createElement('li');
+      listItem.textContent = "Anak Ayam Turun " + i + " mati satu tinggal " + (i - 1);
+      outputList.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>
